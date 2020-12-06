@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree 7" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-XJ-Wjq">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="508"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="455"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qkb-EP-5uD">
-                                        <rect key="frame" x="0.0" y="508" width="1024" height="260"/>
+                                        <rect key="frame" x="0.0" y="455" width="1024" height="313"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hG5-TZ-mcA">
                                                 <rect key="frame" x="249.5" y="0.0" width="525" height="48"/>
@@ -367,6 +367,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5Si-8f-an0">
+                                                <rect key="frame" x="464.5" y="265" width="95.5" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ee-Xh-Tki">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6n-Yz-cgO" userLabel="ScoreNumber Label">
+                                                        <rect key="frame" x="54" y="0.0" width="41.5" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -384,6 +401,7 @@
                     <connections>
                         <outlet property="correctWordLabel" destination="Qeb-9v-Dwx" id="Qge-bd-FoQ"/>
                         <outlet property="scoreLabel" destination="qcN-Mb-SYL" id="DVr-01-dtl"/>
+                        <outlet property="scoreNumberLabel" destination="W6n-Yz-cgO" id="dqM-c7-cKj"/>
                         <outlet property="treeImageView" destination="hSd-XJ-Wjq" id="170-UG-0p8"/>
                         <outletCollection property="letterButtons" destination="0Ek-HC-tHO" collectionClass="NSMutableArray" id="w2S-qc-1Vj"/>
                         <outletCollection property="letterButtons" destination="ALA-TU-A1m" collectionClass="NSMutableArray" id="9Ga-kn-Lxz"/>

@@ -27,9 +27,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreNumberLabel: UILabel!
     @IBOutlet var letterButtons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
+        scoreNumberLabel.text = "0"
         newRound()
     }
     
@@ -57,13 +59,17 @@ class ViewController: UIViewController {
         correctWordLabel.text = wordWithSpacing
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named:  "Tree \(currentGame.incorrectMovesRemaining)")
+        scoreNumberLabel.text = String(Game.totalScore)
     }
     
     func updateGameState() {
         if currentGame.incorrectMovesRemaining == 0 {
             totalLosses += 1
+            Game.totalScore = 0
+            updateUI()
         } else if currentGame.word == currentGame.formattedWord {
             totalWins += 1
+            Game.totalScore += 20
         } else {
             updateUI()
         }
